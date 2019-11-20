@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://TileMaps/TileMap.tres" type="TileSet" id=1]
+
+[node name="Scene1" type="Node2D"]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+format = 1
+tile_data = PoolIntArray( -262142, 0, 65543, -262141, 0, 131078, -262140, 0, 131078, -262139, 0, 65544, -131076, 0, 8, -65538, 0, 1, -65537, 0, 2, -131072, 0, 2, -131071, 0, 3, -2, 0, 0, -1, 0, 0, -65536, 0, 0, -65535, 0, 0, 65534, 0, 0, 65535, 0, 0, 0, 0, 0, 1, 0, 0 )
