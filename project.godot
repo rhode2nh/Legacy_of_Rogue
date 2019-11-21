@@ -17,6 +17,7 @@ _global_script_class_icons={
 
 config/name="Legacy_of_Rogue"
 run/main_scene="res://Assets/Levels/Main.tscn"
+boot_splash/image="res://icon.png"
 config/icon="res://icon.png"
 config/auto_accept_quit=false
 
