@@ -7,7 +7,7 @@ const JUMP_HEIGHT = -600
 const MAX_SPEED = 300
 const NO_SPEED = 0
 
-var scene = preload("res://Scenes/Block.tscn")
+var scene = preload("res://Assets/Entities/Projectile/Block.tscn")
 
 export (int, 0, 200) var inertia = 100
 

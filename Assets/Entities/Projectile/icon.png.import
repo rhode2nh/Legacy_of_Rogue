@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/spritesheet_players.png-4e824da41d2ca7c655448170c1d84d30.stex"
+path="res://.import/icon.png-800b17a9e2fbf1ba3833d541e1bc7214.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/spritesheet_players.png"
-dest_files=[ "res://.import/spritesheet_players.png-4e824da41d2ca7c655448170c1d84d30.stex" ]
+source_file="res://Assets/Entities/Projectile/icon.png"
+dest_files=[ "res://.import/icon.png-800b17a9e2fbf1ba3833d541e1bc7214.stex" ]
 
 [params]
 
