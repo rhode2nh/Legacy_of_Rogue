@@ -1,4 +1,4 @@
-extends "res://Assets/Entities/Characters/*BaseNPC/BaseNPC.gd"
+extends "res://Assets/Entities/Characters/*BaseEnemy/BaseEnemy.gd"
 
 # Declare member variables here. Examples:
 # var a = 2

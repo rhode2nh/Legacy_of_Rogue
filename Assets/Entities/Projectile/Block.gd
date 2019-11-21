@@ -6,6 +6,7 @@ export var bulletSpeed = 100
 
 
 func _ready():
+	add_to_group("Projectiles")
 	if spawn.position.x < 0:
 		spawnNegative = true
 

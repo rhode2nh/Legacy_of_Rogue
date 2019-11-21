@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id=1]
 
 [node name="Block" type="Area2D" groups=[
-"blocks",
+"Projectiles",
 ]]
 script = ExtResource( 1 )
 bulletSpeed = 13
