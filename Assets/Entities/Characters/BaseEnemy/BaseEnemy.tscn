@@ -3,7 +3,7 @@
 [ext_resource path="res://Assets/Entities/Characters/BaseNPC/BaseNPC.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/Entities/Characters/BaseEnemy/BaseEnemy.gd" type="Script" id=2]
 
-[node name="BaseEnemy" index="0" groups=[
+[node name="BaseEnemy" groups=[
 "Enemies",
 ] instance=ExtResource( 1 )]
 script = ExtResource( 2 )
@@ -15,4 +15,3 @@ script = ExtResource( 2 )
 [node name="RayCast2D" type="RayCast2D" parent="." index="2"]
 enabled = true
 cast_to = Vector2( -400, 0 )
-[connection signal="collision" from="." to="." method="_Handle_Collision"]
