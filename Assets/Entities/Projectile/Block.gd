@@ -2,7 +2,8 @@ extends Area2D
 
 onready var spawn = get_node("/root/Main/Player/Bullet_Spawn")
 var spawnNegative = false
-export var bulletSpeed = 100
+export var bulletSpeed = 15
+export var damage = 15
 
 
 func _ready():
