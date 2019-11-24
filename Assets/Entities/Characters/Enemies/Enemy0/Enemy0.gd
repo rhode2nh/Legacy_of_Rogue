@@ -1,4 +1,4 @@
-extends "res://Assets/Entities/Characters/*BaseEnemy/BaseEnemy.gd"
+extends "res://Assets/Entities/Characters/BaseEnemy/BaseEnemy.gd"
 
 func _physics_process(delta):
 	if $RayCast2D.is_colliding():
