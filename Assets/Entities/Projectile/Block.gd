@@ -33,3 +33,4 @@ func _on_Block_area_entered(area):
 		area.health -= damage
 		print("Health remaining: ", area.health)
 		queue_free()
+		

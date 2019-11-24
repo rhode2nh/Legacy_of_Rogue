@@ -21,6 +21,7 @@ boot_splash/image="res://icon.png"
 config/icon="res://icon.png"
 config/auto_accept_quit=false
 
+<<<<<<< HEAD
 [autoload]
 
 global_script="*res://Assets/Scripts/global_script.gd"
@@ -61,6 +62,8 @@ quit_game={
  ]
 }
 
+=======
+>>>>>>> f5c5477524ea1ebfcb2ffeeeb7ec828ac009725a
 [rendering]
 
 quality/2d/use_pixel_snap=true
