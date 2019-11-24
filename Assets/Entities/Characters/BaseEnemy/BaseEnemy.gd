@@ -4,10 +4,6 @@ extends "res://Assets/Entities/Characters/*BaseNPC/BaseNPC.gd"
 
 #TODO: Create damage variable for the projectile object.
 #TODO: What should all enemies inherit?
-func _on_BaseEnemy_area_entered(area):
-	if area.is_in_group("Projectiles"):
-		health -= area.damage
-		print('Health remaining: ', health)
-		area.queue_free()
+func _process(delta):
 	if health <= 0:
 		queue_free()

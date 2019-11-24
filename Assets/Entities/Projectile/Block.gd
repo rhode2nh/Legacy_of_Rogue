@@ -26,3 +26,10 @@ func _on_Block_body_entered(body):
 func _on_VisibilityNotifier2D_screen_exited():
 	queue_free()
 	print('deleted')
+
+
+func _on_Block_area_entered(area):
+	if area.is_in_group("Enemies"):
+		area.health -= damage
+		print("Health remaining: ", area.health)
+		queue_free()

@@ -14,4 +14,3 @@ position = Vector2( 340, 410 )
 
 [node name="Enemy0" parent="." instance=ExtResource( 3 )]
 position = Vector2( 567, 105 )
-[connection signal="body_entered" from="Enemy0" to="Enemy0" method="_on_BaseEnemy_body_entered"]
