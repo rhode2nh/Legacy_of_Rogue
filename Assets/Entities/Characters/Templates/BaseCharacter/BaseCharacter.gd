@@ -1,12 +1,18 @@
 extends KinematicBody2D
 
+# warning-ignore:unused_class_variable
 export var moveSpeed = 100
 export var gravity = 2000
+# warning-ignore:unused_class_variable
 export var acceleration = 40
+# warning-ignore:unused_class_variable
 export var jumpHeight = -600
+# warning-ignore:unused_class_variable
 export var maxSpeed = 300
+# warning-ignore:unused_class_variable
 export var health = 100
 const NO_SPEED = 0
+export var debugMode = false
 
 var velocity = Vector2.ZERO
 
@@ -19,3 +25,14 @@ func _physics_process(delta):
 	velocity.y += gravity * delta
 	velocity = move_and_slide(velocity, Vector2.UP, false, 4, PI/4, false)
 
+
+func take_damage(damage):
+	health -= damage 
+	print("CURRENT HEALTH: ", health)
+	if (health <= 0):
+		queue_free()
+
+
+func knock_back():
+	velocity.y = jumpHeight
+	velocity.x = 100

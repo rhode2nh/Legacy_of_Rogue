@@ -34,14 +34,3 @@ func get_input():
 			$BulletSpawn.position.x = -$BulletSpawn.position.x
 	else:
 		velocity.x = lerp(velocity.x, NO_SPEED, 0.2)
-
-
-func take_damage(damage):
-	health -= damage 
-	print("CURRENT HEALTH: ", health)
-	if (health <= 0):
-		queue_free()
-
-
-func knock_back():
-	velocity.y = jumpHeight
