@@ -11,6 +11,7 @@ func _ready():
 	add_to_group("Projectiles")
 	if spawn.position.x < 0:
 		spawnNegative = true
+		$RayCast2D.set_cast_to(-$RayCast2D.get_cast_to())
 
 
 func _process(delta):
@@ -22,15 +23,16 @@ func _process(delta):
 
 func _on_Block_body_entered(body):
 	if body.is_in_group("Enemies"):
-		if position.x - body.position.x < 0:
+		# Check which direction to knockback the character
+		if $RayCast2D.get_cast_to().x > 0:
 			body.knock_back(xKnockBack)
 		else:
 			body.knock_back(-xKnockBack)
-		print(position - body.position)
 		body.take_damage(damage)
+		body.take_damage_color()
 	queue_free()
 
 
 func _on_VisibilityNotifier2D_screen_exited():
 	queue_free()
-	print('deleted')
+	#print('deleted')

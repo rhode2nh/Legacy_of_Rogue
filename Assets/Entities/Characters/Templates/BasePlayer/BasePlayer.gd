@@ -3,6 +3,7 @@ extends "res://Assets/Entities/Characters/Templates/BaseCharacter/BaseCharacter.
 var scene = preload("res://Assets/Entities/Projectile/Block.tscn")
 
 func _physics_process(delta):
+	jump_check()
 	get_input()
 	
 	# for index in get_slide_count():
@@ -19,7 +20,9 @@ func get_input():
 		get_tree().get_root().add_child(bullet)
 	# Jump
 	if Input.is_action_just_pressed("ui_up"):
-		velocity.y = jumpHeight
+		if jumps > 0:
+			velocity.y = jumpHeight
+			jumps -= 1
 	# Move right
 	if Input.is_action_pressed("ui_right"):
 		velocity.x = max(moveSpeed + acceleration, maxSpeed)

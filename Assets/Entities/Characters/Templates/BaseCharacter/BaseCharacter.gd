@@ -11,6 +11,8 @@ export var jumpHeight = -600
 export var maxSpeed = 300
 # warning-ignore:unused_class_variable
 export var health = 100
+export var jumps = 1
+export var maxJumps = 3
 const NO_SPEED = 0
 export var debugMode = false
 
@@ -37,3 +39,20 @@ func take_damage(damage):
 func knock_back(var xKnockBack):
 	velocity.y = jumpHeight
 	velocity.x = xKnockBack
+
+
+func jump_check():
+	if is_on_floor():
+		jumps = maxJumps
+
+
+func take_damage_color():
+	var t = Timer.new()
+	t.set_wait_time(0.1)
+	t.set_one_shot(true)
+	self.add_child(t)
+	$Sprite.set_modulate(Color.red)
+	t.start()
+	yield(t, "timeout")
+	$Sprite.set_modulate(Color.white)
+	t.queue_free()
