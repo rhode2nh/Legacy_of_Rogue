@@ -28,11 +28,12 @@ func _physics_process(delta):
 
 func take_damage(damage):
 	health -= damage 
-	print("CURRENT HEALTH: ", health)
+	if debugMode:
+		print(self.name, " Health: ", health)
 	if (health <= 0):
 		queue_free()
 
 
-func knock_back():
+func knock_back(var xKnockBack):
 	velocity.y = jumpHeight
-	velocity.x = 100
+	velocity.x = xKnockBack

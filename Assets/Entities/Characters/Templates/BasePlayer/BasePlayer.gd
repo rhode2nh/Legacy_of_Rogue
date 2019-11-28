@@ -4,8 +4,6 @@ var scene = preload("res://Assets/Entities/Projectile/Block.tscn")
 
 func _physics_process(delta):
 	get_input()
-	#velocity.y += gravity * delta
-	#velocity = move_and_slide(velocity, Vector2.UP, false, 4, PI/4, false)
 	
 	# for index in get_slide_count():
 	#	var collision = get_slide_collision(index)

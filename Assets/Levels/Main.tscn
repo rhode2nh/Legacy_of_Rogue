@@ -14,3 +14,4 @@ position = Vector2( 264.211, 198.947 )
 
 [node name="BaseEnemy" parent="." instance=ExtResource( 3 )]
 position = Vector2( 571.579, 94.7368 )
+debugMode = true

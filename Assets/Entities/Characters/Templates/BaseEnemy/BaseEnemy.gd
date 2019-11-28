@@ -12,5 +12,5 @@ func _physics_process(delta):
 
 func _on_CollisionHandler_body_entered(body):
 	if body.is_in_group("Player"):
-		body.knock_back()
+		#body.knock_back()
 		print("Hit")

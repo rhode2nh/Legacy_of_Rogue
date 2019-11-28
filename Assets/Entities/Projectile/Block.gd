@@ -4,6 +4,7 @@ onready var spawn = get_node("/root/Main/BasePlayer/BulletSpawn")
 var spawnNegative = false
 export var bulletSpeed = 15
 export var damage = 15
+export var xKnockBack = 100
 
 
 func _ready():
@@ -21,19 +22,15 @@ func _process(delta):
 
 func _on_Block_body_entered(body):
 	if body.is_in_group("Enemies"):
+		if position.x - body.position.x < 0:
+			body.knock_back(xKnockBack)
+		else:
+			body.knock_back(-xKnockBack)
+		print(position - body.position)
 		body.take_damage(damage)
-		body.knock_back()
 	queue_free()
 
 
 func _on_VisibilityNotifier2D_screen_exited():
 	queue_free()
 	print('deleted')
-
-
-#func _on_Block_area_entered(area):
-#	if area.is_in_group("Enemies"):
-#		area.health -= damage
-#		print("Health remaining: ", area.health)
-#		queue_free()
-		
