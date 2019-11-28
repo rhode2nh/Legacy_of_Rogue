@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/Entities/Characters/Templates/BaseNPC/BaseNPC.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Assets/Entities/Characters/Templates/BaseEnemy/BaseEnemy.gd" type="Script" id=2]
+
+[node name="BaseEnemy" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+
+[node name="CollisionHandler" parent="." index="2"]
+editor/display_folded = true
+[connection signal="body_entered" from="CollisionHandler" to="." method="_on_CollisionHandler_body_entered"]

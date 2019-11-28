@@ -47,15 +47,12 @@ func _physics_process(delta):
 	#		collision.collider.apply_central_impulse(-collision.normal * inertia)
 
 
-# When Player Area2D collides with other Area2D
-# Determines what group that area belongs to then sends out signal 
-func _on_Area2D_area_entered(area):
-	if (area.is_in_group("Enemies") && area.has_method("Handle_Player_Collision")):
-		area.Handle_Player_Collision(self)
-
-
-func takeDamage(damage):
+func take_damage(damage):
 	health -= damage 
 	print("CURRENT HEALTH: ", health)
 	if (health <= 0):
 		queue_free()
+
+
+func knock_back():
+	velocity.y = jumpHeight
