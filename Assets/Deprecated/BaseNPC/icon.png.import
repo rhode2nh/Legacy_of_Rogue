@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/icon.png-c6b94c35ba8271272985f5004838c400.stex"
+path="res://.import/icon.png-b13ac3a3a6d114112782b7a1b52a2db5.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Entities/Characters/BaseNPC/icon.png"
-dest_files=[ "res://.import/icon.png-c6b94c35ba8271272985f5004838c400.stex" ]
+source_file="res://Assets/Deprecated/BaseNPC/icon.png"
+dest_files=[ "res://.import/icon.png-b13ac3a3a6d114112782b7a1b52a2db5.stex" ]
 
 [params]
 
