@@ -59,7 +59,6 @@ func knock_back(var xKnockBack, var yKnockBack):
 	t.queue_free()
 
 
-
 func jump_check():
 	if is_on_floor():
 		jumps = maxJumps

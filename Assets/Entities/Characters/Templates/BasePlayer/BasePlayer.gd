@@ -5,6 +5,7 @@ var scene = preload("res://Assets/Entities/Projectile/Block.tscn")
 func _physics_process(delta):
 	jump_check()
 	get_input()
+#	out_bounds()
 	
 	# for index in get_slide_count():
 	#	var collision = get_slide_collision(index)
@@ -35,3 +36,8 @@ func get_input():
 			$BulletSpawn.position.x = -$BulletSpawn.position.x
 	else:
 		velocity.x = lerp(velocity.x, NO_SPEED, 0.2)
+
+
+#func out_bounds():
+#	if position.y > 1000:
+#		get_tree().reload_current_scene()
