@@ -4,7 +4,8 @@ onready var spawn = get_node("/root/Main/BasePlayer/BulletSpawn")
 var spawnNegative = false
 export var bulletSpeed = 15
 export var damage = 15
-export var xKnockBack = 100
+export var xKnockBack = 400
+export var yKnockBack = -400
 
 
 func _ready():
@@ -25,9 +26,9 @@ func _on_Block_body_entered(body):
 	if body.is_in_group("Enemies"):
 		# Check which direction to knockback the character
 		if $RayCast2D.get_cast_to().x > 0:
-			body.knock_back(xKnockBack)
+			body.knock_back(xKnockBack, yKnockBack)
 		else:
-			body.knock_back(-xKnockBack)
+			body.knock_back(-xKnockBack, yKnockBack)
 		body.take_damage(damage)
 		body.take_damage_color()
 	queue_free()
