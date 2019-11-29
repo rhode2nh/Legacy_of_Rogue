@@ -1,6 +1,7 @@
 extends Area2D
 
-onready var spawn = get_node("/root/Main/BasePlayer/BulletSpawn")
+#onready var spawn = get_node("/root/Main/BasePlayer/BulletSpawn")
+onready var spawn = get_tree().get_nodes_in_group("Player")[0].get_node("BulletSpawn")
 var spawnNegative = false
 export var bulletSpeed = 15
 export var damage = 15
