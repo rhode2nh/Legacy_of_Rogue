@@ -8,6 +8,7 @@ extends "res://Assets/Entities/Characters/Templates/BasePlayer/BasePlayer.gd"
 func _ready():
 	pass # Replace with function body.
 
+
 func _physics_process(delta):
 	if Input.is_action_just_pressed("ui_left"):
 		if $Blink.position.x > 0:

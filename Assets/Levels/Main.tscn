@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Assets/Levels/Main.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Levels/Scene1.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Assets/Entities/Characters/TeleportPlayer/TeleportPlayer.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Assets/Entities/Characters/Templates/BaseEnemy/BaseEnemy.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Assets/Entities/Collectables/Templates/BaseCollectable/BaseCollectable.tscn" type="PackedScene" id=5]
 
 [node name="Main" type="Node"]
 script = ExtResource( 1 )
@@ -16,3 +17,6 @@ position = Vector2( 60.7174, 41.0847 )
 
 [node name="BaseEnemy" parent="." instance=ExtResource( 4 )]
 position = Vector2( 571.579, 94.7368 )
+
+[node name="BaseCollectable" parent="." instance=ExtResource( 5 )]
+position = Vector2( 919.084, 104.972 )
